@@ -1,0 +1,10 @@
+<img *ngIf="!list" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921"/>
+
+<div *ngIf="list?.length === 0">
+
+    There are no records to display
+</div>
+<ng-container *ngIf="list && list.length > 0">
+    <ng-content select="[content]"></ng-content>
+</ng-container>
+
