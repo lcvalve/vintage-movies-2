@@ -13,7 +13,7 @@ export class EditActorComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   model: actorDTO = {name: 'Tom Holland', dateOfBirth: new Date(), biography: 'default value',
-                         picture: 'https://akns-images.eonline.com/eol_images/Entire_Site/20211114/rs_1200x1200-211214164226-1200-tom-holland.ct.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top'}
+                         picture: 'https://m.media-amazon.com/images/M/MV5BNzZiNTEyNTItYjNhMS00YjI2LWIwMWQtZmYwYTRlNjMyZTJjXkEyXkFqcGdeQXVyMTExNzQzMDE0._V1_QL75_UX100_CR0,1,100,148_.jpg'}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {

@@ -32,6 +32,9 @@ import {MarkdownModule} from 'ngx-markdown';
 import { MovieTheaterFormComponent } from './movie-theaters/movie-theater-form/movie-theater-form.component';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './utilities/map/map.component';
+import { FormMovieComponent } from './movies/form-movie/form-movie.component';
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
+import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { MapComponent } from './utilities/map/map.component';
     InputImgComponent,
     InputMarkdownComponent,
     MovieTheaterFormComponent,
-    MapComponent
+    MapComponent,
+    FormMovieComponent,
+    MultipleSelectorComponent,
+    ActorsAutocompleteComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
