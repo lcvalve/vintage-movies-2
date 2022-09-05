@@ -4,8 +4,8 @@
         (click)="select(item, index)">{{item.value}}</li>
     </ul>
     <div class="container-buttons">
-        <button type="button" disabled (click)="selectAll">>></button>
-        <button type="button" disabled (click)="deSelectAll"><<</button>
+        <button type="button"  (click)="selectAll()">&gt;&gt;</button>
+        <button type="button"  (click)="deSelectAll()">&lt;&lt;</button>
     </div>
         <ul>
             <li *ngFor="let item of SelectedItems; let index = index"
