@@ -6,12 +6,19 @@
         [formControl]="control"
         [matAutocomplete]="auto"
         />
-        <mat-autocomplete #auto>
-            <mat-option (onSelectionChange)="optionSelected($event)" *ngFor="let actor of actors" [value]="actor">
-                <img [src]="actor.picture"/>{{actor.name}}
+    </mat-form-field>
+        <mat-autocomplete #auto
+            (optionSelected)="optionSelected($event)"
+            >
+            <mat-option *ngFor="let actor of actorsToDisplay" [value]="actor">
+                <img [src]="actor.picture" />{{actor.name}}
             </mat-option>
         </mat-autocomplete>
-    </mat-form-field>
+
+
+            <!--<mat-option (onSelectionChange)="optionSelected($event)" *ngFor="let actor of actors" [value]="actor">
+                <img [src]="actor.picture"/>{{actor.name}}
+            </mat-option> -->
     
 </form>
 

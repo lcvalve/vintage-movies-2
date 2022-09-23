@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiURL: 'https://localhost:44349/api'   //GAV I need to use apiURL to hide the base URL this is for dev...
 };
 
 /*

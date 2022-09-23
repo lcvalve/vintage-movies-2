@@ -21,6 +21,7 @@
 
     <app-input-markdown 
         [markdownContent]="model?.biography"
+        [label]="'Biography'"
     (changeMarkdown)="changeMarkdown($event)"></app-input-markdown>
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>

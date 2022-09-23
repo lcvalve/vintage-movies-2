@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { actorCreationDTO } from '../actors.model';
+import { ActorsService } from '../actors.service';
 
 @Component({
   selector: 'app-create-actor',
@@ -9,7 +11,7 @@ import { actorCreationDTO } from '../actors.model';
 })
 export class CreateActorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private actorsService: ActorsService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -17,7 +19,9 @@ export class CreateActorComponent implements OnInit {
   }
 
   saveChanges(actorCreationDTO: actorCreationDTO){
-    console.log(actorCreationDTO);
+    this.actorsService.create(actorCreationDTO).subscribe(() => {
+      this.router.navigate(['/actors']);
+    });
   }
 
 }

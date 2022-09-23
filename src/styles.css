@@ -4,3 +4,12 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~leaflet/dist/leaflet.css";
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.table-index{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.table-index a{
+    margin-right: 1rem;
+}

@@ -36,6 +36,8 @@ export class FormActorComponent implements OnInit {
   }
 
   saveChanges(){
+      console.log(this.form.value);
+      
       this.onSaveChanges.emit(this.form.value);
   }
 

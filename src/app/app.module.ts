@@ -1,11 +1,12 @@
 
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { GenericListComponent } from './utilities/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2'
 import {MaterialModule} from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
@@ -35,6 +36,8 @@ import { MapComponent } from './utilities/map/map.component';
 import { FormMovieComponent } from './movies/form-movie/form-movie.component';
 import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
+import { DisplayErrorsComponent } from './utilities/display-errors/display-errors.component';
+import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,9 @@ import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors
     MapComponent,
     FormMovieComponent,
     MultipleSelectorComponent,
-    ActorsAutocompleteComponent
+    ActorsAutocompleteComponent,
+    DisplayErrorsComponent,
+    MovieDetailsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -74,6 +79,8 @@ import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors
     ReactiveFormsModule,
     FormsModule,
     LeafletModule,
+    HttpClientModule,
+    SweetAlert2Module.forRoot(),
     MarkdownModule.forRoot()
    
   ],
